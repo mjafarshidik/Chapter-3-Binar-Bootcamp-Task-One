@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">First Task Chapter 3 Binar Bootcamp</string>
     <string name="logo_app">Logo App</string>
+    <string name="home">Welcome to My first Android app</string>
 </resources>
