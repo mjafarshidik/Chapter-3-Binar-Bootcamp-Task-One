@@ -4,15 +4,18 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.mjafarshidik.firsttaskchapter3binarbootcamp.databinding.ActivitySplashScreenBinding
 import kotlinx.coroutines.*
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreenActivity : AppCompatActivity() {
+    private lateinit var splashScreenBinding: ActivitySplashScreenBinding
     private val time = 2000L
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        splashScreenBinding = ActivitySplashScreenBinding.inflate(layoutInflater)
+        setContentView(splashScreenBinding.root)
         withCoroutine(time)
     }
 

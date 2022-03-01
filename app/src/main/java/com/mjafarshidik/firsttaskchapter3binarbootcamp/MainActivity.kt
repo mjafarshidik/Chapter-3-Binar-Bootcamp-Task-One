@@ -4,38 +4,41 @@ import android.annotation.SuppressLint
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.WindowManager
-import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.annotation.RequiresApi
+import com.mjafarshidik.firsttaskchapter3binarbootcamp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private var webView: WebView? = null
+    private lateinit var mainBinding: ActivityMainBinding
 
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        webView = findViewById(R.id.webView)
+        mainBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(mainBinding.root)
         webViewSetup()
     }
 
     @SuppressLint("SetJavaScriptEnabled")
-    fun webViewSetup(){
-        webView!!.webViewClient = WebViewClient()
-        webView!!.loadUrl("https://www.binaracademy.com/")
-        val webSettings = webView!!.settings
-        webSettings.javaScriptEnabled = true
-        webSettings.domStorageEnabled = true
-        webSettings.allowContentAccess = true
-        webSettings.allowFileAccess = true
+    fun webViewSetup() {
+        mainBinding.apply {
+            webView.webViewClient = WebViewClient()
+            webView.loadUrl("https://www.binaracademy.com/")
+            val webSettings = webView.settings
+            webSettings.javaScriptEnabled = true
+            webSettings.domStorageEnabled = true
+            webSettings.allowContentAccess = true
+            webSettings.allowFileAccess = true
+        }
     }
 
     override fun onBackPressed() {
-        if (webView!!.canGoBack()) {
-            webView!!.goBack()
-        } else {
-            super.onBackPressed()
+        mainBinding.apply {
+            if (webView.canGoBack()) {
+                webView.goBack()
+            } else {
+                super.onBackPressed()
+            }
         }
     }
 }
