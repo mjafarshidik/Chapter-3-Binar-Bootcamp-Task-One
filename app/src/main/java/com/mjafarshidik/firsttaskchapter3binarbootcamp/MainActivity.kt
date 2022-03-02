@@ -20,16 +20,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("SetJavaScriptEnabled")
-    fun webViewSetup() {
-        mainBinding.apply {
-            webView.webViewClient = WebViewClient()
-            webView.loadUrl("https://www.binaracademy.com/")
-            val webSettings = webView.settings
-            webSettings.javaScriptEnabled = true
-            webSettings.domStorageEnabled = true
-            webSettings.allowContentAccess = true
-            webSettings.allowFileAccess = true
-        }
+    fun webViewSetup() = mainBinding.run {
+        webView.webViewClient = WebViewClient()
+        webView.loadUrl("https://www.binaracademy.com/")
+        val webSettings = webView.settings
+        webSettings.javaScriptEnabled = true
+        webSettings.domStorageEnabled = true
+        webSettings.allowContentAccess = true
+        webSettings.allowFileAccess = true
     }
 
     override fun onBackPressed() {
