@@ -8,6 +8,8 @@ This project uses:
 - Kotlin Coroutines
 
 Screen Display
-![Screenshot_20220302_133339](https://user-images.githubusercontent.com/62690663/156353675-a9185933-3580-42fb-b8ac-f49b85af2aab.png)
 
-![Screenshot_20220302_182524](https://user-images.githubusercontent.com/62690663/156353683-3b728e88-5c10-4bae-8403-88a6e5e4460e.png)
+![Screenshot_20220302_133339](https://user-images.githubusercontent.com/62690663/156353991-03d46d03-9ccd-4ff8-9f12-529dbab05a3d.png)
+
+
+![Screenshot_20220302_182524](https://user-images.githubusercontent.com/62690663/156354006-2454b49e-e376-419c-a5a8-bfe8db1dbd0d.png)
