@@ -2,6 +2,7 @@
 This project is the first assignment of Binar Bootcamp
 --
 This project uses:
+- View Binding
 - WebView
 - Kotlin Coroutines
 
