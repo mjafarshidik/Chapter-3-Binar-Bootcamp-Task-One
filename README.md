@@ -1,6 +1,4 @@
 # Chapter-3-Binar-Bootcamp-Task-One
-Chapter 3 Binar Bootcamp
-==
 This project is the first assignment of Binar Bootcamp
 --
 This project uses:
