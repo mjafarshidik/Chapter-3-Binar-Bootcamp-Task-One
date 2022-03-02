@@ -5,6 +5,7 @@ import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.WebViewClient
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import com.mjafarshidik.firsttaskchapter3binarbootcamp.databinding.ActivityMainBinding
 
@@ -17,6 +18,8 @@ class MainActivity : AppCompatActivity() {
         mainBinding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainBinding.root)
         webViewSetup()
+
+        Toast.makeText(this, "hallo mas", Toast.LENGTH_SHORT).show()
     }
 
     @SuppressLint("SetJavaScriptEnabled")
